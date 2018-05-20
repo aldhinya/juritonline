@@ -1,0 +1,171 @@
+.container i {padding-right:2px}
+
+.breadcrumb a:hover{
+     color:#ddd;
+}
+
+.panel-title a:hover{
+    color:#e74c3c;
+}
+
+.panel-body {
+    padding:5px 15px 5px 15px
+}
+
+.panel-body a:hover {
+    color:#e74c3c;
+}
+
+.badge {
+    margin-bottom: 5px
+}
+
+.btn-trans{
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn-trans:hover{
+    background: #c0392b;
+    color: #fff;
+}
+
+.btn-trans-active{
+    background: #2980b9;
+    color: #fff;
+}
+.btn-trans-active:hover{
+    background: #216491;
+    color: #fff;
+}
+
+ol > li > a{
+    color: #fff;
+}
+
+.panel .panel-primary{
+    border: 1px solid #fff;
+}
+
+.left-sidebar{
+    border-right:1px solid #D2DDE;
+}
+
+
+
+.footer{
+padding-top:-90px;
+    background: #22313F;
+    color: #fff;
+}
+.footer a{color:#fff}
+.footer a:hover{color:#fff}
+/* anvigas menu  */
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+color: #fff;
+background-color: #428bca;
+}
+
+.margintop20 {
+    margin-top:20px;
+}
+
+.nav-pills>li>a {
+border-radius: 0px;
+}
+
+a {
+color: #000;
+text-decoration: none;
+}
+
+a:hover {
+color: #000;
+text-decoration: none;
+}
+
+
+.nav-stacked>li+li {
+margin-top: 0px;
+margin-left: 0;
+border-bottom:1px dotted #dadada;
+}
+
+.active2 {
+    border-right:4px solid #34495E;
+    border-bottom:1px dotted #dadada;
+}
+
+/* foto profile */
+.drop-area{
+  width:100px;
+  height:45px;
+  border: 1px solid #999;
+  text-align: center;
+  padding:10px;
+  cursor:pointer;
+}
+#thumbnail img{
+  width:128px;
+  height:128px;
+  margin:5px;
+}
+canvas{
+  border:1px solid red;
+}
+
+/* thumbnails */
+.thumbnail {
+    border:1px solid #ccc;
+}
+
+.thumbnail .title{
+    background: #22313F;
+    color: #fff;
+    padding:6px 5px;
+    margin-bottom: 5px;
+
+}
+
+.thumbnail:hover{
+    border:1px solid #22313F;
+}
+
+.title a{
+    font-size:15px;
+    color: #fff;
+}
+
+
+.thumbnail img {
+    width:100%;
+    height: 100%;
+    max-height:180px
+}
+
+/* Efek Loading */
+/* http://blog.muhyusufhs.com/2016/03/01/cara-membuat-loading-mirip-yotube-pada-website-menggunakan-html/ */
+#nprogress {
+  pointer-events: none;
+}
+#nprogress .bar {
+  background: #e74c3c;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #4e74c6;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}

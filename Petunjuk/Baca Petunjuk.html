@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href=' data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABHNCSVQICAgIfAhkiAAABIxJREFUSImdlF9MU1ccx3/n3NsWWUFwKASutx21FIoglcQC1aQQAR0Rl8WMB9hkUMwcyZCYSAhvmw/T+EZIlmUz7mFZTIh7YQgaN/4WghtExjQM2fizroG2iODtn+u9/e1hNqnIn6u/x3N+3/M5v9/vnC/AawQigsVi+c5ms91HRMU65nUgY2NjJ30+3wW3221aW1sb6u/v/1uJjioF4P/JR9fX11MBAJxOZ4NSrWIIIMKSx1MTDodBpVLB7OxsGfr9u5RIFbdrdXW1dnh4+KxarQZCCEiSpBpwOnF6erpvJy2rBICIkJeX91lSUtKyLMtsIBDYQyllZ2Zm7IgIhJBt9Yra1d7eXvav2511vLj4c5Zl7yMiIACEw2FDbW3te0rO2LEKs9ncm5mZ+QQRoaCg4LJerw/xPI88z2N+fn7HTs95x0rq6urKBUHIO2g2f0sIgfr6+h8ZhlkihIAsy8AwTEFTU5PxjSGICBMPHpRrtdpYJOQWAIDD4fgtMSHh0QsAeL3ewy6XK/eNIZcuXTIylJZrVKq7nR0dTgAAQggcLy39RpZloJRCIBCAQCDw/nbnwOW2trTW1taMzfbKy8s/MRqNoZKSEsfGCrOzs90cx+H+/fvRYDCEtpsLfUurVbnd7pMVFRUtGxNXV1cdADB57969W9HrhBDIMBo7JUkChmFAEAR1Y2Pjp1tCmltb5wRBuMsA6EwZGb+3tLScBgDAYDDR5XIdysrK6iGErLwiZJgf4uPjQ7IsA8uyMDg4+OFW1bz0i6qrqy/29fdfTdm375FaoxFdLlfa/MOHOR+dPy94p6cZHwBYrVaQZTnWtbh4dnJq6gtZllWEEKCEeD84c6b2yrVrP20LAQBoaGg4OTAwcGVtbS1HrVbLiYmJ48FgcEkSxXAYADQaDcTGxvIejycvUkUkUlJSro+OjtZvdIBXvGt8fPyxXq83PZekvITdu//yeL2HgsFgBhBiQkSTKIqmp0+fpiAAvKPX/xoKhYgkSXGICCzDSKIoDvT09Pheau1GSFdXV3ooFCri0tLGTxQXV1gslgvp6em/xMTEPKOUAqUU4rRaKcNovDE0NGSllE5GtIFg8GDnzZu2TQcTHceOHbtgSE9Hu91+MXodEQERobm5eddM1IDPORzneJ4XdDodpqamYklJyffb2gwigs1m6zUYDOt2u71ixxsBAK6vg/HAgTme55HjOMzJyfG1tbWlRee81K6vOzoO/7O4WJaQkDBdVFQ0rwRC4uIgy2zuFUUxYjN7VlZWNncARITCwsLB5ORkzM3N7R4ZGdmjBAIA8GhiQh9xZY7j0GQyLUa3jEYAladOXV1YWDiqVquBUpo80tenGJJlsczpdDqnJEnAsiwIgsCVlpbeiIBITU3NiT+mpj5eWl4+jYgaRASWZTEmJuZnq9X6VX9vryfo9//p9fvdW0EQkSm02bofz8yUqV78G0QU3967t/vokSPXSVVV1fX5+fl8SshzQmn4hY4golqj0fgJIT6WZTvu3LlzeyvIu5WVJ549efKlHA6LUWAalmUVx3GT/wERgw+eRpkTLwAAAABJRU5ErkJggg==' rel='icon' type='image/x-icon'/>
+    <title>Petunjuk</title>
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="./assets/css/jumbotron-narrow.css" rel="stylesheet">
+    <script src="./assets/js/ie-emulation-modes-warning.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <b><h3>Petunjuk Setting Alas Jurit Online</h3></b>
+      </div>
+      <h4>Setting Database</h4>
+<ol>
+  <li>Download dabatase <a href="./assets/database.sql" download>di sini</a>.</li>
+  <li>Upload database ke phpmyadmin</li>
+  <li>Setting username, password, dan nama database pada folder <font color="blue">application/config/database.php</font></li>
+  <pre>
+  'username' => '<font color="red">USERNAME</font>',
+  'password' => '<font color="red">PASSWORD</font>',
+  'database' => '<font color="red">NAMADATABASE</font>',</pre>
+  <li>Silahkan cek apakah web sudah bisa diakses atau belum.</li>
+</ol>
+<br>
+<h4>Setting Sendmail</h4>
+      <ol>
+  <li>Buka file <font color="blue">application/controllers/Member.php</font></li>
+  <li>Cari kode berikut lalu ganti
+  <pre>
+$CI = get_instance();
+$CI->load->library('email');
+$config['protocol'] = 'smtp';
+$config['smtp_host'] = 'mail.jurit.online'; <font color="red">// Alamat SMTP server</font>
+$config['smtp_port'] = '26'; <font color="red">// Port SMTP</font>
+$config['smtp_user'] = 'no-reply@jurit.online'; <font color="red">// Alamat Email Anda</font>
+$config['smtp_pass'] = 'inipassword'; <font color="red">// Password Email Anda</font>
+$config['mailtype'] = 'html';
+$config['charset'] = 'iso-8859-1';
+$config['wordwrap'] = TRUE;
+$config['newline'] = "\r\n";
+$config['crlf'] = "\r\n";
+//$config['newline'] = "\r\n";
+$CI->email->initialize($config);
+
+$this->email->from('no-reply@jurit.online', 'Jurit Online'); <font color="red">// Alamat Email Anda dan Nama yang Akan tampil pada email yang akan terkirim ke user</font>
+$this->email->to($data['email']);
+$this->email->subject('Verifikasi Akun Jurit Online');
+$this->email->message($msg);
+  </pre>
+
+</ol>
+<br>
+<h4>Versi PHP</h4>
+<ul>
+  <li>Berikut adalah versi PHP yang Saya gunakan : <a href="./assets/versiphp.html">Klik Di Sini</a></li>
+</ul><br>
+<h4>Akun User</h4>
+<ol>
+<li><b>Admin</b></li>
+- Email : admin@email.com<br>
+- Password : admin
+<li><b>User :</b></li>
+- Email : user@user.com<br>
+- Password : user
+</ol>
+
+<center>Ada Pertanyaan ? hubungi Saya via email <font color="blue">contact@aldhi.net</font></center>
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
